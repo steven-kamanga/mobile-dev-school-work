@@ -12,10 +12,9 @@ import {
 import { AlertCircleIcon } from "@/components/ui/icon";
 import { Input, InputField } from "@/components/ui/input";
 import React from "react";
-import { Formik, Field } from "formik";
+import { Formik } from "formik";
 import * as Yup from "yup";
 import { Button, ButtonText } from "@/components/ui/button";
-import * as Linking from "expo-linking";
 import { Textarea, TextareaInput } from "@/components/ui/textarea";
 import * as SMS from "expo-sms";
 
@@ -124,7 +123,7 @@ const SendSms = () => {
               className="bg-blue-500 mt-3 text-typography-950"
               onPress={() => handleSubmit()}
             >
-              <ButtonText>Call Number</ButtonText>
+              <ButtonText>Send Text</ButtonText>
             </Button>
           </Box>
         </Box>
