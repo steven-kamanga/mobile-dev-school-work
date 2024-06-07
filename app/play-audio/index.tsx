@@ -29,7 +29,7 @@ const PlayAudio = () => {
   }, [sound]);
 
   return (
-    <Box className="flex-1 items-center">
+    <Box className="flex-1 mt-2 items-center">
       <Button onPress={playSound} action="positive" variant="outline">
         <ButtonText className="  text-typography-950">Play audio</ButtonText>
       </Button>
