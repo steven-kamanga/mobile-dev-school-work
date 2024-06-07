@@ -2,6 +2,7 @@ import { Box } from "@/components/ui/box";
 import { Button, ButtonText } from "@/components/ui/button";
 import { router } from "expo-router";
 import { ScrollView, Text } from "react-native";
+import * as Linking from "expo-linking";
 
 export default function Page() {
   return (
@@ -54,6 +55,18 @@ export default function Page() {
           variant="outline"
         >
           <ButtonText>Text to Speech</ButtonText>
+        </Button>
+        <Button
+          className="mb-2"
+          onPress={() => {
+            Linking.openURL(
+              "https://www.reddit.com/r/FlutterDev/comments/15pz2mg/after_4_years_in_flutter_i_am_disappointed/"
+            );
+          }}
+          action="negative"
+          variant="outline"
+        >
+          <ButtonText>Redirect User</ButtonText>
         </Button>
       </ScrollView>
     </Box>

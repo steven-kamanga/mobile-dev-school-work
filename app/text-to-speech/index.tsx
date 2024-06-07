@@ -39,7 +39,7 @@ const TextToSpeech = () => {
         touched,
       }) => (
         <Box className="flex items-center">
-          <Box className=" w-56">
+          <Box className=" w-72">
             <FormControl
               size="md"
               isDisabled={false}
