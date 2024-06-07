@@ -76,6 +76,14 @@ export default function Page() {
         >
           <ButtonText>Restaurant Form</ButtonText>
         </Button>
+        <Button
+          className="mb-2 bg-blue-500"
+          onPress={() => router.push("activities-rn-example")}
+          action="negative"
+          variant="outline"
+        >
+          <ButtonText>Activities Class Example</ButtonText>
+        </Button>
       </ScrollView>
     </Box>
   );
