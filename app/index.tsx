@@ -39,6 +39,14 @@ export default function Page() {
         >
           <ButtonText>Call A number</ButtonText>
         </Button>
+        <Button
+          className="mb-2"
+          onPress={() => router.push("send-sms")}
+          action="negative"
+          variant="outline"
+        >
+          <ButtonText>Send a Text</ButtonText>
+        </Button>
       </ScrollView>
     </Box>
   );
