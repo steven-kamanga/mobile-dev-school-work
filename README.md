@@ -1,19 +1,6 @@
 # Semester 8 Mobile Dev Examples
 
-This repository contains examples for mobile development projects created during Semester 8. These examples utilize **React Native Expo**, **gluestac-ui**, and **nativewind** for building and styling mobile applications.
-
-## Table of Contents
-- [Overview](#overview)
-- [Technologies Used](#technologies-used)
-- [Setup Instructions](#setup-instructions)
-- [Examples](#examples)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Overview
-
-The purpose of this repository is to provide students with practical examples of mobile application development using modern tools and frameworks. Each example is designed to illustrate different aspects of mobile development, from UI design to state management and event handling.
-
+This repository contains examples for mobile development projects created during Semester 8(Bsc. Cs)
 ## Technologies Used
 
 - **React Native Expo**: A framework for building native apps using React. It allows for a rapid development cycle and easy deployment to both iOS and Android.
@@ -26,5 +13,11 @@ To get started with the examples in this repository, follow the steps below:
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/semester-8-mobile-dev-examples.git
-   cd semester-8-mobile-dev-examples
+   git clone https://github.com/steven-kamanga/mobile-dev-school-work.git
+   cd mobile-dev-school-work
+2. **Install node-module**
+   ```sh
+   yarn install
+3. **Run the project**
+   ```sh
+   yarn run start
