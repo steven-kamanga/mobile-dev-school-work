@@ -5,8 +5,10 @@ import {
   useCameraPermissions,
 } from "expo-camera"; // Import Camera here
 import { useRef, useState } from "react";
-import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import * as MediaLibrary from "expo-media-library";
+import { Box } from "@/components/ui/box";
+import { Button, ButtonText } from "@/components/ui/button";
 
 export default function Capture() {
   const [facing, setFacing] = useState<CameraType>("back");
@@ -36,7 +38,9 @@ export default function Capture() {
         <Text style={{ textAlign: "center" }}>
           We need your permission to show the camera
         </Text>
-        <Button onPress={requestPermission} title="grant permission" />
+        <Button onPress={requestPermission}>
+          <ButtonText>Request Permission</ButtonText>
+        </Button>
       </View>
     );
   }
@@ -46,18 +50,26 @@ export default function Capture() {
   }
 
   return (
-    <View style={styles.container}>
+    <Box className="flex-1">
       <CameraView ref={cameraRef} style={styles.camera} facing={facing}>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={toggleCameraFacing}>
-            <Text style={styles.text}>Flip Camera</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={handleCapture}>
-            <Text style={styles.text}>Capture</Text>
-          </TouchableOpacity>
-        </View>
+        <Box
+          className="flex-1 bg-transparent m-16 flex-row justify-center items-end
+        "
+        >
+          <Button
+            className="mr-2"
+            action="primary"
+            variant="outline"
+            onPress={toggleCameraFacing}
+          >
+            <ButtonText>Flip Camera</ButtonText>
+          </Button>
+          <Button action="primary" variant="outline" onPress={handleCapture}>
+            <ButtonText>Capture</ButtonText>
+          </Button>
+        </Box>
       </CameraView>
-    </View>
+    </Box>
   );
 }
 
