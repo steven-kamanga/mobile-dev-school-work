@@ -85,9 +85,7 @@ const SendSms = () => {
               </Input>
               <FormControlError>
                 <FormControlErrorIcon size={"md"} as={AlertCircleIcon} />
-                <FormControlErrorText>
-                  Must be at least 10 characters.
-                </FormControlErrorText>
+                <FormControlErrorText>{errors.number}</FormControlErrorText>
               </FormControlError>
             </FormControl>
             <FormControl
@@ -112,9 +110,7 @@ const SendSms = () => {
                 />
               </Textarea>
               <FormControlHelper>
-                <FormControlHelperText>
-                  Error sending the message.
-                </FormControlHelperText>
+                <FormControlHelperText>{errors.sms}</FormControlHelperText>
               </FormControlHelper>
             </FormControl>
             <Button

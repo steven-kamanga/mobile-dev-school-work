@@ -47,6 +47,14 @@ export default function Page() {
         >
           <ButtonText>Send a Text</ButtonText>
         </Button>
+        <Button
+          className="mb-2"
+          onPress={() => router.push("text-to-speech")}
+          action="negative"
+          variant="outline"
+        >
+          <ButtonText>Text to Speech</ButtonText>
+        </Button>
       </ScrollView>
     </Box>
   );
