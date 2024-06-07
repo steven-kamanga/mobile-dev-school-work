@@ -18,20 +18,20 @@ import { Box } from "@/components/ui/box";
 const validationSchema = Yup.object().shape({
   restaurants: Yup.array().of(
     Yup.object().shape({
-      halaal: Yup.string().required("Selection is required").label("Halaal"),
+      name: Yup.string().required("Selection is required").label("name"),
     })
   ),
 });
 
 const RestaurantForm = () => {
   const initialValues = {
-    restaurants: [{ halaal: "" }, { halaal: "" }],
+    restaurants: [{ name: "" }, { name: "" }],
   };
 
   const handleSubmit = (values: any) => {
     const formattedValues = values.restaurants.map(
       (restaurant: any, index: number) => ({
-        [`Restaurant ${index + 1}`]: restaurant.halaal,
+        [`Restaurant ${index + 1}`]: restaurant.name,
       })
     );
     console.log(formattedValues);
@@ -79,10 +79,10 @@ const RestaurantForm = () => {
                           <TableData>Restaurant {index + 1}</TableData>
                           <TableData>
                             <RadioFormSection
-                              value={restaurant.halaal}
+                              value={restaurant.name}
                               onChange={(value: any) =>
                                 setFieldValue(
-                                  `restaurants[${index}].halaal`,
+                                  `restaurants[${index}].name`,
                                   value
                                 )
                               }

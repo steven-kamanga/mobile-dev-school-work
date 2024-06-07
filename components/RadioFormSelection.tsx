@@ -22,17 +22,17 @@ const RadioFormSection: React.FC<RadioFormSectionProps> = ({
   return (
     <RadioGroup className="mb-2" value={value} onChange={onChange}>
       <HStack space="sm">
-        <Radio size="sm" value="halaal">
+        <Radio size="sm" value="fast">
           <RadioIndicator>
             <RadioIcon as={CircleIcon} />
           </RadioIndicator>
-          <RadioLabel>Halaal</RadioLabel>
+          <RadioLabel>Fast Food</RadioLabel>
         </Radio>
-        <Radio size="sm" value="malaal">
+        <Radio size="sm" value="casual">
           <RadioIndicator>
             <RadioIcon as={CircleIcon} />
           </RadioIndicator>
-          <RadioLabel>Malaal</RadioLabel>
+          <RadioLabel>Casual</RadioLabel>
         </Radio>
       </HStack>
     </RadioGroup>
