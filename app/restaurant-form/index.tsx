@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, Text } from "react-native";
+import { Alert, ScrollView, Text } from "react-native";
 import { Formik, FieldArray } from "formik";
 import * as Yup from "yup";
 import {
@@ -35,6 +35,15 @@ const RestaurantForm = () => {
       })
     );
     console.log(formattedValues);
+    const formattedValuesString = JSON.stringify(formattedValues, null, 2);
+    Alert.alert("Form Submitted", formattedValuesString, [
+      {
+        text: "Cancel",
+        onPress: () => console.log("Cancel Pressed"),
+        style: "cancel",
+      },
+      { text: "OK", onPress: () => console.log("OK Pressed") },
+    ]);
   };
 
   return (
